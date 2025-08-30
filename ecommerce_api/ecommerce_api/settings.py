@@ -133,16 +133,3 @@ REST_FRAMEWORK = {
     "PAGE_SIZE": 10,
 }
 AUTH_USER_MODEL = "users.CustomUser"
-
-
-import dj_database_url
-import os
-
-DEBUG = False
-ALLOWED_HOSTS = ["your-app-name.herokuapp.com"]
-
-DATABASES = {
-    'default': dj_database_url.config(conn_max_age=600, ssl_require=True)
-}
-
-STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
